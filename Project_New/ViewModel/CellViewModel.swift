@@ -37,12 +37,9 @@ class CellViewModel {
             } else {
                 self.cell?.imgUserContent.image = CellViewModel.placeholder
                 if let imageURL = userContent.imageHref {
-                    AF.request(imageURL, method: .get).responseImage { response in
-                        guard let image = response.result.value else {
-
-                            return
-                        }
-                        self.image.value = image
+                    Alamofire.request(imageURL, method: .get).responseImage { response in
+                    
+                        //self.image.value = image
                     }
                 }
             }
