@@ -18,13 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
 
-//       let cntUserContentList = UserContentListViewController()
-//       let service = UserContentAPI.init()
-//       let viewModel = UserContentViewModel.init(content: [], service: service, title: "")
-//       cntUserContentList.viewModel = viewModel
+       let cntUserContentList = UserContentListViewController()
+       let service = UserContentAPI.init()
+       let viewModel = UserContentViewModel.init(content: [], service: service, title: "")
+       cntUserContentList.viewModel = viewModel
 
-//        let nav = UINavigationController(rootViewController: cntUserContentList)
-//        window?.rootViewController = nav
+        let nav = UINavigationController(rootViewController: cntUserContentList)
+        window?.rootViewController = nav
 
         window?.makeKeyAndVisible()
 
