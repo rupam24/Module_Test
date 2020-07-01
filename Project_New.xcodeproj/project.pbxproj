@@ -133,7 +133,6 @@
 		188A71AA24AC9F170088BDFA /* Project_New */ = {
 			isa = PBXGroup;
 			children = (
-				188A71FB24ACC0200088BDFA /* App Manager */,
 				188A71F624ACBF740088BDFA /* API Manager */,
 				188A71F324ACBC550088BDFA /* View */,
 				188A71EE24ACBB010088BDFA /* Model */,
@@ -252,13 +251,6 @@
 				188A71FC24ACC0420088BDFA /* AppManager.swift */,
 			);
 			path = "API Manager";
-			sourceTree = "<group>";
-		};
-		188A71FB24ACC0200088BDFA /* App Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "App Manager";
 			sourceTree = "<group>";
 		};
 		48A000E41BF8F6B0CB3CE2F3 /* Frameworks */ = {
