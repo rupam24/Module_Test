@@ -12,9 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+//       let cntUserContentList = UserContentListViewController()
+//       let service = UserContentAPI.init()
+//       let viewModel = UserContentViewModel.init(content: [], service: service, title: "")
+//       cntUserContentList.viewModel = viewModel
+
+//        let nav = UINavigationController(rootViewController: cntUserContentList)
+//        window?.rootViewController = nav
+
+        window?.makeKeyAndVisible()
+
         return true
     }
 
