@@ -10,7 +10,7 @@ import UIKit
 
 class UserContentListViewController:  BaseViewController {
 
-    var tblVw: UITableView!
+    var tblVw =  UITableView()
 
     private let refreshControl = UIRefreshControl()
 
@@ -86,16 +86,15 @@ class UserContentListViewController:  BaseViewController {
     // MARK: - Load Table view
 
     private func loadTableView() {
-        tblVw = UITableView(frame: view.bounds, style: .plain)
+        tblVw = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+
         tblVw.delegate = self
         tblVw.dataSource = self
         tblVw.rowHeight = UITableView.automaticDimension
         tblVw.estimatedRowHeight = 100
-
         tblVw.register(UserContentListTableViewCell.self, forCellReuseIdentifier: Constants.cellIdentifier)
 
         view.addSubview(tblVw)
-
         tblVw.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
