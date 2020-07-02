@@ -13,7 +13,6 @@
 		188A71B524AC9F4B0088BDFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188A71B424AC9F4B0088BDFA /* Assets.xcassets */; };
 		188A71B824AC9F4B0088BDFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188A71B624AC9F4B0088BDFA /* LaunchScreen.storyboard */; };
 		188A71C324AC9F4D0088BDFA /* Project_NewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A71C224AC9F4D0088BDFA /* Project_NewTests.swift */; };
-		188A71CE24AC9F4D0088BDFA /* Project_NewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A71CD24AC9F4D0088BDFA /* Project_NewUITests.swift */; };
 		188A71DD24ACB1850088BDFA /* CustomExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A71DC24ACB1850088BDFA /* CustomExtension.swift */; };
 		188A71E024ACB1CA0088BDFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A71DF24ACB1CA0088BDFA /* Constants.swift */; };
 		188A71E524ACB3570088BDFA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A71E424ACB3570088BDFA /* BaseViewController.swift */; };
@@ -26,6 +25,8 @@
 		188A71F824ACBF9B0088BDFA /* BaseRestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A71F724ACBF9B0088BDFA /* BaseRestAPI.swift */; };
 		188A71FA24ACBFF00088BDFA /* UserContentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A71F924ACBFF00088BDFA /* UserContentAPI.swift */; };
 		188A71FD24ACC0420088BDFA /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A71FC24ACC0420088BDFA /* AppManager.swift */; };
+		18BD725824AE28080048108F /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 18BD725724AE28080048108F /* .swiftlint.yml */; };
+		18BD725A24AE2DB20048108F /* APIResponseCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD725924AE2DB20048108F /* APIResponseCheck.swift */; };
 		275064BD7C58D73484C99599 /* Pods_Project_New.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73853F727F826B308E1E9D93 /* Pods_Project_New.framework */; };
 		9F896F87DD46987D5DC0742B /* Pods_Project_NewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C261F39DEB76946EF2A34D0 /* Pods_Project_NewTests.framework */; };
 /* End PBXBuildFile section */
@@ -59,8 +60,6 @@
 		188A71C224AC9F4D0088BDFA /* Project_NewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_NewTests.swift; sourceTree = "<group>"; };
 		188A71C424AC9F4D0088BDFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188A71C924AC9F4D0088BDFA /* Project_NewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project_NewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		188A71CD24AC9F4D0088BDFA /* Project_NewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_NewUITests.swift; sourceTree = "<group>"; };
-		188A71CF24AC9F4D0088BDFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188A71DC24ACB1850088BDFA /* CustomExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExtension.swift; sourceTree = "<group>"; };
 		188A71DF24ACB1CA0088BDFA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		188A71E424ACB3570088BDFA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +72,8 @@
 		188A71F724ACBF9B0088BDFA /* BaseRestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRestAPI.swift; sourceTree = "<group>"; };
 		188A71F924ACBFF00088BDFA /* UserContentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentAPI.swift; sourceTree = "<group>"; };
 		188A71FC24ACC0420088BDFA /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		18BD725724AE28080048108F /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		18BD725924AE2DB20048108F /* APIResponseCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseCheck.swift; sourceTree = "<group>"; };
 		5C261F39DEB76946EF2A34D0 /* Pods_Project_NewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_NewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73853F727F826B308E1E9D93 /* Pods_Project_New.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_New.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E3B027E35163DF9DEEF97A /* Pods-Project_New.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_New.release.xcconfig"; path = "Target Support Files/Pods-Project_New/Pods-Project_New.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,9 +112,9 @@
 		188A719F24AC9F170088BDFA = {
 			isa = PBXGroup;
 			children = (
+				18BD725724AE28080048108F /* .swiftlint.yml */,
 				188A71AA24AC9F170088BDFA /* Project_New */,
 				188A71C124AC9F4D0088BDFA /* Project_NewTests */,
-				188A71CC24AC9F4D0088BDFA /* Project_NewUITests */,
 				188A71A924AC9F170088BDFA /* Products */,
 				DD6BCC242F2A56F507DFAF16 /* Pods */,
 				48A000E41BF8F6B0CB3CE2F3 /* Frameworks */,
@@ -155,18 +156,10 @@
 			isa = PBXGroup;
 			children = (
 				188A71C224AC9F4D0088BDFA /* Project_NewTests.swift */,
+				18BD725924AE2DB20048108F /* APIResponseCheck.swift */,
 				188A71C424AC9F4D0088BDFA /* Info.plist */,
 			);
 			path = Project_NewTests;
-			sourceTree = "<group>";
-		};
-		188A71CC24AC9F4D0088BDFA /* Project_NewUITests */ = {
-			isa = PBXGroup;
-			children = (
-				188A71CD24AC9F4D0088BDFA /* Project_NewUITests.swift */,
-				188A71CF24AC9F4D0088BDFA /* Info.plist */,
-			);
-			path = Project_NewUITests;
 			sourceTree = "<group>";
 		};
 		188A71DB24ACB14A0088BDFA /* CustomExtensions */ = {
@@ -285,6 +278,7 @@
 				188A71A524AC9F170088BDFA /* Frameworks */,
 				188A71A624AC9F170088BDFA /* Resources */,
 				ACA5398F74C45C492957012D /* [CP] Embed Pods Frameworks */,
+				18BD725224AE21300048108F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -380,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BD725824AE28080048108F /* .swiftlint.yml in Resources */,
 				188A71B824AC9F4B0088BDFA /* LaunchScreen.storyboard in Resources */,
 				188A71B524AC9F4B0088BDFA /* Assets.xcassets in Resources */,
 				188A71B324AC9F180088BDFA /* Main.storyboard in Resources */,
@@ -403,6 +398,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18BD725224AE21300048108F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
 		ACA5398F74C45C492957012D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -492,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BD725A24AE2DB20048108F /* APIResponseCheck.swift in Sources */,
 				188A71C324AC9F4D0088BDFA /* Project_NewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,7 +513,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				188A71CE24AC9F4D0088BDFA /* Project_NewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

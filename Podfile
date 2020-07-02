@@ -9,6 +9,7 @@ inhibit_all_warnings!
 pod 'Alamofire'
 pod 'SnapKit', '~> 4.0.0'
 pod 'AlamofireImage'
+ 
 
  target 'Project_NewTests' do
     inherit! :search_paths
