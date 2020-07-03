@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserContentListViewController:  BaseViewController {
+class UserContentListViewController: BaseViewController {
 
     var tblVw =  UITableView()
 
@@ -19,6 +19,7 @@ class UserContentListViewController:  BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadInitialSettings()
+
     }
 
     // MARK: - Bind View Model
@@ -55,6 +56,16 @@ class UserContentListViewController:  BaseViewController {
         viewModel?.fetchContent()
 
         bindViewModel()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.tintColor = .black
+
+        // Play around with the duration until you find
+        // a time interval, you find suitable
+        UIView.animate(withDuration: 2) {
+            self.navigationController?.navigationBar.isTranslucent = true
+        }
+
     }
 
     // MARK: - Add Refresh control to table view
@@ -86,7 +97,13 @@ class UserContentListViewController:  BaseViewController {
     // MARK: - Load Table view
 
     private func loadTableView() {
-        tblVw = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+
+        self.view.addSubview(tblVw)
+        tblVw.translatesAutoresizingMaskIntoConstraints = false
+        tblVw.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        tblVw.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        tblVw.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        tblVw.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
 
         tblVw.delegate = self
         tblVw.dataSource = self
@@ -94,7 +111,7 @@ class UserContentListViewController:  BaseViewController {
         tblVw.estimatedRowHeight = 100
         tblVw.register(UserContentListTableViewCell.self, forCellReuseIdentifier: Constants.cellIdentifier)
 
-        view.addSubview(tblVw)
+        //view.addSubview(tblVw)
         tblVw.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
@@ -112,14 +129,10 @@ extension UserContentListViewController: UITableViewDataSource, UITableViewDeleg
         return viewModel?.contentList.value.count ?? 0
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as? UserContentListTableViewCell else {
-            fatalError("Not able to load cell from nib")
-        }
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as?UserContentListTableViewCell else { fatalError("Not able to load cell from nib")
+             }
         cell.selectionStyle = .none
-
         if let cellViewModel = viewModel?.contentList.value[indexPath.row] {
             cellViewModel.cell = cell
         }

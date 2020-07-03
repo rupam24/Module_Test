@@ -39,14 +39,10 @@ class CellViewModel {
                 if let imageURL = userContent.imageHref {
                     Alamofire.request(imageURL, method: .get).responseImage { response in
                         switch response.result {
-                           case .success(let value):
-                           //success, do image setting
-                            let image = value
-                            
-                            self.image.value = image
-                            break
-
-                        case .failure(let _): break
+                        case .success(let value):
+                        let image = value
+                        self.image.value = image
+                        case .failure : break
                         //failure will not do anything
                         }
                     }

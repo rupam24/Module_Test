@@ -15,7 +15,7 @@ import UIKit
 extension UIViewController {
 
     func startActivityIndicator(
-        style: UIActivityIndicatorView.Style = .whiteLarge,
+        style: UIActivityIndicatorView.Style = UIActivityIndicatorView.Style.large,
         location: CGPoint? = nil) {
 
         let loc = location ?? view.center

@@ -5,13 +5,14 @@ opt_in_rules:
 - empty_count
 - empty_string
 
+
+
 excluded:
 - Carthage
 - Pods
 - Project_NewTests
 
 line_length:
-warning: 150
 error: 200
 ignores_function_declarations: true
 ignores_comments: true
