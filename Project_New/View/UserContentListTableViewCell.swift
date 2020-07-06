@@ -10,12 +10,14 @@ import UIKit
 import SnapKit
 
 class UserContentListTableViewCell: UITableViewCell {
+    //Added placeholder image
     let imgUserContent: UIImageView = {
         let imgVw = UIImageView()
-        imgVw.image = UIImage(named: "placeholder4")
+        imgVw.image = UIImage(named: "Imageplaceholder")
         return imgVw
     }()
 
+    // Added the Title label
     let lblTitle: UILabel = {
         let lbl = UILabel()
         lbl.font = UIFont.systemFont(ofSize: 15)
@@ -25,6 +27,7 @@ class UserContentListTableViewCell: UITableViewCell {
         return lbl
     }()
 
+    // Added Description label
     let lblDescription: UILabel = {
         let lbl = UILabel()
         lbl.font = UIFont.systemFont(ofSize: 14)
@@ -46,6 +49,7 @@ class UserContentListTableViewCell: UITableViewCell {
     // MARK: - Set up cell
 
     private func setUpCell() {
+        // Added all the cell component to the contentview
         contentView.addSubview(imgUserContent)
         contentView.addSubview(lblTitle)
         contentView.addSubview(lblDescription)
@@ -57,7 +61,7 @@ class UserContentListTableViewCell: UITableViewCell {
 
     private func setConstraints() {
         let margin = Constants.constantMarginInCell
-
+        // Set constarints for UI elements
         imgUserContent.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().inset(margin)
             make.top.equalToSuperview().inset(margin)

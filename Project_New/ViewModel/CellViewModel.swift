@@ -20,7 +20,8 @@ class CellViewModel {
         self.userContent = userContent
 
         if CellViewModel.placeholder == nil {
-            CellViewModel.placeholder = UIImage.init(named: "placeholder4")
+            //set Default image if no image is there
+            CellViewModel.placeholder = UIImage.init(named: Constants.Imageplaceholder)
         }
 
         self.image = Observable.init(value: nil)

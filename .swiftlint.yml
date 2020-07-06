@@ -9,6 +9,7 @@ excluded:
 - Carthage
 - Pods
 - Project_NewTests
+
 # implicitly
 line_length: 200
 error: 200
