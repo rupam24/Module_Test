@@ -129,8 +129,9 @@ extension UserContentListViewController: UITableViewDataSource, UITableViewDeleg
         return viewModel?.contentList.value.count ?? 0
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as?UserContentListTableViewCell else { fatalError("Not able to load cell from nib")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as? UserContentListTableViewCell else {
+        fatalError("Not able to load cell from nib")
              }
         cell.selectionStyle = .none
         if let cellViewModel = viewModel?.contentList.value[indexPath.row] {

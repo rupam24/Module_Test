@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181C9BBD24B2B0BF007DE048 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 181C9BBC24B2B0BD007DE048 /* Default-568h@2x.png */; };
 		188A71AC24AC9F180088BDFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A71AB24AC9F180088BDFA /* AppDelegate.swift */; };
 		188A71AE24AC9F180088BDFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A71AD24AC9F180088BDFA /* SceneDelegate.swift */; };
 		188A71B324AC9F180088BDFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188A71B124AC9F180088BDFA /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181C9BBC24B2B0BD007DE048 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		188A71A824AC9F170088BDFA /* Project_New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_New.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188A71AB24AC9F180088BDFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188A71AD24AC9F180088BDFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		188A719F24AC9F170088BDFA = {
 			isa = PBXGroup;
 			children = (
+				181C9BBC24B2B0BD007DE048 /* Default-568h@2x.png */,
 				18BD725724AE28080048108F /* .swiftlint.yml */,
 				188A71AA24AC9F170088BDFA /* Project_New */,
 				188A71C124AC9F4D0088BDFA /* Project_NewTests */,
@@ -377,6 +380,7 @@
 				18BD725824AE28080048108F /* .swiftlint.yml in Resources */,
 				188A71B824AC9F4B0088BDFA /* LaunchScreen.storyboard in Resources */,
 				188A71B524AC9F4B0088BDFA /* Assets.xcassets in Resources */,
+				181C9BBD24B2B0BF007DE048 /* Default-568h@2x.png in Resources */,
 				188A71B324AC9F180088BDFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
