@@ -19,7 +19,6 @@ struct UserContent: Codable {
         case description
         case imageHref
     }
-
 }
 
 struct UserContentWrapper: Codable {

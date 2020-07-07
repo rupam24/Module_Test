@@ -31,7 +31,7 @@ struct Constants {
      */
 
     static let noTitle = "No Title"
-    static let noSubtitle = "No Subtitle"
+    static let noSubtitle = " "
 
     /**
      For tag for Activity Indicator
@@ -43,4 +43,15 @@ struct Constants {
      */
     static let networkNotAvailable = "Network not available"
     static let userListEmpty = "User Content List is empty"
+    /**
+      Static message for refresh control
+     */
+    static let refreshTitle = "Pull to refersh"
+    static let retryTitle = "Retry"
+    /** Static constant for errors
+     */
+    static let fatalError = "Not able to load cell from nib"
+    /** Static constant for placeholder
+     */
+    static let Imageplaceholder = "placeholder4"
 }

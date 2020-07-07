@@ -14,6 +14,7 @@ protocol ContentAPI {
 
 class UserContentAPI: ContentAPI {
 
+    //To fetch the content 
     func fetchContent(completion: @escaping (UserContentWrapper?, Error?) -> Void) {
         BaseRestAPI.requestGETURL(Constants.jsonUrl) { (data, error) in
             guard let data = data else {
@@ -23,7 +24,8 @@ class UserContentAPI: ContentAPI {
             do {
                 let userWrapper = try JSONDecoder().decode(UserContentWrapper.self, from: data)
                 completion(userWrapper, nil)
-            } catch {
+            }
+            catch {
                 completion(nil, error)
             }
         }

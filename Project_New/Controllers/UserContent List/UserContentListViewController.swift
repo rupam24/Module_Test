@@ -20,7 +20,7 @@ class UserContentListViewController: BaseViewController {
         super.viewDidLoad()
         loadInitialSettings()
 
-    }
+                                }
 
     // MARK: - Bind View Model
 
@@ -28,9 +28,10 @@ class UserContentListViewController: BaseViewController {
         viewModel?.showLoading.bindAndFire(listener: {
             if $0 {
                 self.startActivityIndicator()
-            } else {
-                self.stopActivityIndicator()
             }
+            else {
+                self.stopActivityIndicator()
+                 }
         })
 
         viewModel?.showError.bindAndFire(listener: {
@@ -42,7 +43,8 @@ class UserContentListViewController: BaseViewController {
             if !$0.isEmpty {
                 self.tblVw.isHidden = false
                 self.tblVw.reloadData()
-            } else {
+            }
+            else {
                 self.tblVw.isHidden = true
             }
         })
@@ -65,19 +67,20 @@ class UserContentListViewController: BaseViewController {
         UIView.animate(withDuration: 2) {
             self.navigationController?.navigationBar.isTranslucent = true
         }
-
     }
 
     // MARK: - Add Refresh control to table view
 
     private func addRefreshControl() {
 
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull To Refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: Constants.refreshTitle)
+        refreshControl.backgroundColor = UIColor.red
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
 
         if #available(iOS 10.0, *) {
             tblVw.refreshControl = refreshControl
-        } else {
+        }
+        else {
             tblVw.addSubview(refreshControl)
         }
     }
@@ -131,7 +134,7 @@ extension UserContentListViewController: UITableViewDataSource, UITableViewDeleg
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as? UserContentListTableViewCell else {
-        fatalError("Not able to load cell from nib")
+        fatalError(Constants.retryTitle)
              }
         cell.selectionStyle = .none
         if let cellViewModel = viewModel?.contentList.value[indexPath.row] {

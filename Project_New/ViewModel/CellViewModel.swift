@@ -20,7 +20,8 @@ class CellViewModel {
         self.userContent = userContent
 
         if CellViewModel.placeholder == nil {
-            CellViewModel.placeholder = UIImage.init(named: "placeholder4")
+            //set Default image if no image is there
+            CellViewModel.placeholder = UIImage.init(named: Constants.Imageplaceholder)
         }
 
         self.image = Observable.init(value: nil)
@@ -34,7 +35,8 @@ class CellViewModel {
 
             if let image = self.image.value {
                 self.cell?.imgUserContent.image = image
-            } else {
+            }
+            else {
                 self.cell?.imgUserContent.image = CellViewModel.placeholder
                 if let imageURL = userContent.imageHref {
                     Alamofire.request(imageURL, method: .get).responseImage { response in

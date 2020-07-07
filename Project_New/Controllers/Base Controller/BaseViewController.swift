@@ -26,7 +26,7 @@ class BaseViewController: UIViewController {
 
     let btnRetry: UIButton = {
         let btn = UIButton()
-        btn.setTitle("Retry", for: .normal)
+        btn.setTitle(Constants.retryTitle, for: .normal)
         btn.backgroundColor = UIColor.lightGray
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.addTarget(self, action: #selector(BaseViewProtocol.clickOnRetry), for: .touchUpInside)
@@ -73,7 +73,8 @@ class BaseViewController: UIViewController {
             lblNoInternetMsg.isHidden = false
             btnRetry.isHidden = false
             lblNoInternetMsg.text = msg
-        } else {
+        }
+        else {
             lblNoInternetMsg.isHidden = true
             btnRetry.isHidden = true
             lblNoInternetMsg.text = ""
