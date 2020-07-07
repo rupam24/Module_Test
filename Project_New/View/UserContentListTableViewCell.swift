@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 
 class UserContentListTableViewCell: UITableViewCell {
+    //image view placeholder
     let imgUserContent: UIImageView = {
         let imgVw = UIImageView()
         imgVw.image = UIImage(named: "placeholder4")
