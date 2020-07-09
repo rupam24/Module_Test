@@ -51,7 +51,7 @@
 
 /* Begin PBXFileReference section */
 		181C9BBC24B2B0BD007DE048 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		188A71A824AC9F170088BDFA /* Project_New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_New.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		188A71A824AC9F170088BDFA /* Proficiency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proficiency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188A71AB24AC9F180088BDFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188A71AD24AC9F180088BDFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		188A71B224AC9F180088BDFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		188A71A924AC9F170088BDFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				188A71A824AC9F170088BDFA /* Project_New.app */,
+				188A71A824AC9F170088BDFA /* Proficiency.app */,
 				188A71BE24AC9F4D0088BDFA /* Project_NewTests.xctest */,
 				188A71C924AC9F4D0088BDFA /* Project_NewUITests.xctest */,
 			);
@@ -289,7 +289,7 @@
 			);
 			name = Project_New;
 			productName = Project_New;
-			productReference = 188A71A824AC9F170088BDFA /* Project_New.app */;
+			productReference = 188A71A824AC9F170088BDFA /* Proficiency.app */;
 			productType = "com.apple.product-type.application";
 		};
 		188A71BD24AC9F4D0088BDFA /* Project_NewTests */ = {
@@ -682,7 +682,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rupam.Project-New";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Proficiency;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -701,7 +701,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rupam.Project-New";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Proficiency;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
