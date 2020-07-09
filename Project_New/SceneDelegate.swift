@@ -12,8 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
-               options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         guard let windowScene = (scene as? UIWindowScene) else { return }
                window = UIWindow(frame: UIScreen.main.bounds)
@@ -22,10 +21,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
               let service = UserContentAPI.init()
               let viewModel = UserContentViewModel.init(content: [], service: service, title: "")
               cntUserContentList.viewModel = viewModel
+        
               let nav = UINavigationController.init(rootViewController: cntUserContentList)
-               window?.rootViewController = nav
-               window?.makeKeyAndVisible()
+               UINavigationBar.appearance().barTintColor = .systemBlue
+               UINavigationBar.appearance().tintColor = .black
+               UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+               UINavigationBar.appearance().isTranslucent = true
 
+        window?.rootViewController = nav
+              window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -35,7 +39,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
@@ -49,5 +52,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
-
 }

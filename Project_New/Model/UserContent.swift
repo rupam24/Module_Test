@@ -29,5 +29,4 @@ struct UserContentWrapper: Codable {
         case title
         case rows
     }
-
 }

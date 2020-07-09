@@ -23,7 +23,6 @@ class CellViewModel {
             //set Default image if no image is there
             CellViewModel.placeholder = UIImage.init(named: Constants.Imageplaceholder)
         }
-
         self.image = Observable.init(value: nil)
         self.bindCell()
     }

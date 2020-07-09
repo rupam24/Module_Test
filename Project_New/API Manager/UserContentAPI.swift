@@ -23,11 +23,8 @@ class UserContentAPI: ContentAPI {
             }
             do {
                 let userWrapper = try JSONDecoder().decode(UserContentWrapper.self, from: data)
-                completion(userWrapper, nil)
-            }
-            catch {
-                completion(nil, error)
-            }
+                completion(userWrapper, nil) } catch { completion(nil, error)
+                }
         }
     }
 }

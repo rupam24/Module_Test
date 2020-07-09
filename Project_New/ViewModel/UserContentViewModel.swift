@@ -42,14 +42,9 @@ class UserContentViewModel: NSObject {
             self.navTitle = userWrapper.title!
             if userWrapper.rows!.isEmpty {
                 self.showError.value = Constants.userListEmpty
+                self.showLoading.value = false } else { self.contentList.value = userWrapper.rows!.map { CellViewModel.init(userContent: $0) }
                 self.showLoading.value = false
-            }
-            else {
-                self.contentList.value = userWrapper.rows!.map { CellViewModel.init(userContent: $0) }
-                self.showLoading.value = false
-            }
-
         }
+      }
     }
-
 }

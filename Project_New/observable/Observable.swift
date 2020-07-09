@@ -31,5 +31,4 @@ class Observable<T> {
         self.listener = listener
         self.listener?(value)
     }
-
 }

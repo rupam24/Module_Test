@@ -10,7 +10,7 @@ import UIKit
 
 class UserContentListViewController: BaseViewController {
 
-    var tblVw =  UITableView()
+    var tblVw = UITableView()
 
     private let refreshControl = UIRefreshControl()
 
@@ -19,18 +19,14 @@ class UserContentListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadInitialSettings()
-
-                                }
+    }
 
     // MARK: - Bind View Model
 
     private func bindViewModel() {
         viewModel?.showLoading.bindAndFire(listener: {
             if $0 {
-                self.startActivityIndicator()
-            }
-            else {
-                self.stopActivityIndicator()
+                 self.startActivityIndicator()} else { self.stopActivityIndicator()
                  }
         })
 
@@ -42,9 +38,7 @@ class UserContentListViewController: BaseViewController {
             self.title = self.viewModel?.navTitle
             if !$0.isEmpty {
                 self.tblVw.isHidden = false
-                self.tblVw.reloadData()
-            }
-            else {
+                self.tblVw.reloadData()} else {
                 self.tblVw.isHidden = true
             }
         })
@@ -56,18 +50,8 @@ class UserContentListViewController: BaseViewController {
         loadTableView()
         addRefreshControl()
         viewModel?.fetchContent()
-
         bindViewModel()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.tintColor = .black
-
-        // Play around with the duration until you find
-        // a time interval, you find suitable
-        UIView.animate(withDuration: 2) {
-            self.navigationController?.navigationBar.isTranslucent = true
-        }
-    }
+      }
 
     // MARK: - Add Refresh control to table view
 

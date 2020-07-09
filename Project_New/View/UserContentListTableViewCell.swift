@@ -81,7 +81,5 @@ class UserContentListTableViewCell: UITableViewCell {
             make.trailing.equalToSuperview().inset(margin)
             make.bottom.equalToSuperview().inset(margin)
         }
-
     }
-
 }

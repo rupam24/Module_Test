@@ -72,13 +72,10 @@ class BaseViewController: UIViewController {
             navigationItem.rightBarButtonItem = nil
             lblNoInternetMsg.isHidden = false
             btnRetry.isHidden = false
-            lblNoInternetMsg.text = msg
-        }
-        else {
+            lblNoInternetMsg.text = msg} else {
             lblNoInternetMsg.isHidden = true
             btnRetry.isHidden = true
             lblNoInternetMsg.text = ""
         }
     }
-
 }

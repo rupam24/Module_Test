@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class BaseRestAPI: NSObject {
-    //network API for requestn
+    //network API for request
     class func requestGETURL(_ strURL: String,
                              completion:@escaping (Data?, Error?) -> Void) {
         Alamofire.request(strURL, method: .get, parameters: nil,
