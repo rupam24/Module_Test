@@ -16,6 +16,7 @@ class UserContentListViewController: BaseViewController {
 
     var viewModel: UserContentViewModel?
 
+    // Load Initial setting
     override func viewDidLoad() {
         super.viewDidLoad()
         loadInitialSettings()
@@ -26,7 +27,11 @@ class UserContentListViewController: BaseViewController {
     private func bindViewModel() {
         viewModel?.showLoading.bindAndFire(listener: {
             if $0 {
-                 self.startActivityIndicator()} else { self.stopActivityIndicator()
+                if #available(iOS 13.0, *) {
+                    self.startActivityIndicator()
+                } else {
+                    // Fallback on earlier versions
+                }} else { self.stopActivityIndicator()
                  }
         })
 
@@ -56,7 +61,7 @@ class UserContentListViewController: BaseViewController {
     // MARK: - Add Refresh control to table view
 
     private func addRefreshControl() {
-
+        // properties for refreshbutton component
         refreshControl.attributedTitle = NSAttributedString(string: Constants.refreshTitle)
         refreshControl.backgroundColor = UIColor.red
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
@@ -98,7 +103,6 @@ class UserContentListViewController: BaseViewController {
         tblVw.estimatedRowHeight = 100
         tblVw.register(UserContentListTableViewCell.self, forCellReuseIdentifier: Constants.cellIdentifier)
 
-        //view.addSubview(tblVw)
         tblVw.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }

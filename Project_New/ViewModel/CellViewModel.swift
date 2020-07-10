@@ -26,7 +26,7 @@ class CellViewModel {
         self.image = Observable.init(value: nil)
         self.bindCell()
     }
-
+   //Setting the cell content values
     var cell: UserContentListTableViewCell? {
         didSet {
             self.cell?.lblTitle.text = self.userContent.title ?? Constants.noTitle

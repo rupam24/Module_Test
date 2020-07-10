@@ -25,14 +25,15 @@ class UserContentViewModel: NSObject {
     }
 
     public func fetchContent() {
-
+        // Fetching content of response.
         guard AppManager.sharedInstance.isInternetAvailable() else {
+            //Show error if no network is there
             self.showError.value = Constants.networkNotAvailable
             return
         }
-
+        //Loader before getting the data
         self.showLoading.value = true
-
+        //Fetching content
         self.service.fetchContent { (userWrapper, error) in
             guard let userWrapper = userWrapper else {
                 self.showError.value = error!.localizedDescription
@@ -41,6 +42,7 @@ class UserContentViewModel: NSObject {
             }
             self.navTitle = userWrapper.title!
             if userWrapper.rows!.isEmpty {
+                //If no data availble then it will show the empty string with msg
                 self.showError.value = Constants.userListEmpty
                 self.showLoading.value = false } else { self.contentList.value = userWrapper.rows!.map { CellViewModel.init(userContent: $0) }
                 self.showLoading.value = false

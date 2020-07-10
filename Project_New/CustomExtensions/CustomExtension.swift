@@ -14,6 +14,7 @@ import UIKit
 
 extension UIViewController {
 
+    @available(iOS 13.0, *)
     func startActivityIndicator(
         style: UIActivityIndicatorView.Style = UIActivityIndicatorView.Style.large,
         location: CGPoint? = nil) {
